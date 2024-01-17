@@ -34,7 +34,7 @@ function Login() {
   return (
     <>
       <div className="container-fluid py-5">
-        <div className="container py-5" style={{ marginTop: '50px' }}>
+        <div className="container py-5" style={{ marginTop: '200px' }}>
           <h1 className="mb-4 text-center">로그인</h1>
           <form onSubmit={login}>
             <div className="row g-5">
@@ -42,7 +42,6 @@ function Login() {
                 <div className="row">
                   <div className="form-item w-100">
                     <label htmlFor="email" className="form-label my-3 fw-bold">
-                      아이디
                     </label>
                     <input
                       type="email"
@@ -51,13 +50,12 @@ function Login() {
                       name="email"
                       value={data.email}
                       onChange={changeData}
-                      placeholder="Email"
+                      placeholder="아이디(이메일)"
                     />
                   </div>
                 </div>
                 <div className="form-item">
                   <label htmlFor="password" className="form-label my-3 fw-bold">
-                    비밀번호
                   </label>
                   <input
                     type="password"
@@ -66,24 +64,15 @@ function Login() {
                     name="password"
                     value={data.password}
                     onChange={changeData}
-                    placeholder="Password"
+                    placeholder="비밀번호"
                     />
                 </div>
-
-                <div className="row g-4 text-center align-items-center justify-content-center pt-4">
+                <div className="row g-4 text-center align-items-center justify-content-center pt-4"  style={{marginBottom: '15%'}}>
                   <button
                     type="submit"
                     className="btn border-secondary py-3 px-4 text-uppercase text-primary">
-                    로그인 하기!
+                    로그인 하기
                   </button>
-                </div>
-
-                <div className="row g-3 text-center justify-content-center mt-4">
-                  <div className="col-auto">
-                  <Link className={`${ pathName === 'signup' ? 'nav-link active' : 'nav-link' } form-link fw-bold light-gray-text`} to="/signup">
-                      회원가입
-                    </Link>
-                  </div>
                 </div>
               </div>
             </div>
