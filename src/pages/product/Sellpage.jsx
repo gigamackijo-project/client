@@ -99,7 +99,8 @@ const handleComfirm = () => {
 };
 
   return (
-    <>
+
+    <div style={{ overflowX: 'hidden' }}>
       <div class="container-fluid page-header py-5">
         <h1 class="text-center text-white display-6">Sell</h1>
         <ol class="breadcrumb justify-content-center mb-0">
@@ -108,7 +109,6 @@ const handleComfirm = () => {
           <li class="breadcrumb-item active text-white">Sell</li>
         </ol>
       </div>
-
       <form className="row" onSubmit={handleSubmit(submitEvent, errorEvent)}>
         <div className="container-fluid py-5 mt-5 d-flex justify-content-center">
           <div className="border p-4" style={{ maxWidth: '800px' }}>
@@ -246,7 +246,6 @@ const handleComfirm = () => {
             </div>
           </div>
         </div>
-
         <div className="row g-4 text-center align-items-center justify-content-center pt-4">
           <button
             onClick={handleComfirm}
@@ -257,7 +256,7 @@ const handleComfirm = () => {
           </button>
         </div>
       </form>
-    </>
+    </div>
   );
 }
 
