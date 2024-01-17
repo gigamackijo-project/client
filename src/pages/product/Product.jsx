@@ -8,7 +8,7 @@ import HeartIcon from '@components/product/HeartIcon';
 function Product() {
   const navigate = useNavigate();
   const [products, setProducts] = useRecoilState(productState);
-  const [sortBy, setSortBy] = useState('created_at');
+  const [sortBy, setSortBy] = useState('basic');
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -36,7 +36,7 @@ function Product() {
       if (order === 'createdAt') {
         return new Date(b.createdAt) - new Date(a.createdAt);
       } else if (order === 'created_at') {
-        return new Date(b.created_at) - new Date(a.created_at);
+        return new Date(a.created_at) - new Date(b.created_at);
       } else if (order === 'sale') {
         return b.sale - a.sale;
       }
@@ -102,8 +102,8 @@ function Product() {
                       form="fruitform"
                       onChange={(e) => setSortBy(e.target.value)}
                     >
-                      <option value="created_at">최신순</option>
-                      <option value="basic">등록순</option>
+                      <option value="basic">최신순</option>
+                      <option value="created_at">등록순</option>
                       <option value="sale">할인순</option>
                     </select>
                   </div>
