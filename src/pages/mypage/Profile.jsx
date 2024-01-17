@@ -21,6 +21,10 @@ function Profile() {
     <div>
       <div className="container-fluid page-header py-5 mb-4">
         <h1 className="text-center text-white display-6">My page</h1>
+            <ol className="breadcrumb justify-content-center mb-0">
+                <li className="breadcrumb-item"><a href="#">회원정보</a></li>
+                <li className="breadcrumb-item active text-white">프로필</li>
+            </ol>
       </div>
       <div className="container mt-4">
         <div className="row justify-content-center">
@@ -66,7 +70,7 @@ function Profile() {
           </div>
         </div>
       </div>
-      <div className="container-fluid py-5 mt-5 d-flex justify-content-center" style={{ marginBottom: '5%' }}></div>
+      <div className="container-fluid py-5 mt-5 d-flex justify-content-center"></div>
     </div>
   );
 }
