@@ -88,14 +88,11 @@ useEffect(() => {
             </div>
         </div>
     </div>
-
-
-
     <div className="container-fluid py-5">
         <div className="container py-5">
             <div className="text-center mx-auto mb-5" style={{maxWidth: '700px'}}>
-                <h1 className="display-4 text-secondary">Best3 Product</h1>
-                <p>좋아요 순위에 따른 이번주 인기TOP3 기프티콘 입니다.</p>
+                <h1 className="display-4 text-secondary">Best Product</h1>
+                <p>좋아요 순위에 따른 이번 주 인기 TOP 3 기프티콘 입니다</p>
             </div>
             <div className="row g-4">
             {products?.data?.filter((product) => product.state === '판매중').map((product) => (
@@ -108,7 +105,7 @@ useEffect(() => {
                             <div className="col-6">
                                 <Link to ={"/productDetail/"+product.product_id} className="h5">{product.name}</Link>
                                 <p style={{ fontWeight: 'bold' }}>정가: {product.cost_price} ({product.sale}%)</p>
-                                <h4 className="mb-3">{product.sale_price}원</h4>
+                                <h4 className="mb-3">{product.sale_price} Point</h4>
                                 <Link to={"/productDetail/"+product.product_id} className="btn border border-secondary rounded-pill px-3 text-primary"><i className="me-2 text-primary"><HeartIcon /></i>구매하기</Link>
                             </div>
                         </div>
