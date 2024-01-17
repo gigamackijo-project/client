@@ -29,10 +29,9 @@ function Header() {
                     <div className="collapse navbar-collapse bg-white" id="navbarCollapse">
                         <div className="navbar-nav mx-auto ">
                             <Link className={pathName === 'home' ? "nav-link active" : "nav-link"} to="/">Home</Link>
-                            <Link className={pathName === 'product' ? "nav-link active" : "nav-link"} to="/product">상품리스트</Link>
-                            <Link href="shop-detail.html" className="nav-item nav-link">게시판</Link>
+                            <Link className={pathName === 'product' ? "nav-link active" : "nav-link"} to="/product">상품목록</Link>
                             <div className="nav-item dropdown">
-                                <Link to="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">내정보</Link>
+                                <Link to="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">내 정보</Link>
                                 <div className="dropdown-menu m-0 bg-secondary rounded-0">
                                     <Link to="/profile" className="dropdown-item">프로필</Link>
                                     <Link to="/sellList" className="dropdown-item">판매목록</Link>
